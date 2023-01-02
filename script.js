@@ -14,5 +14,4 @@ button.addEventListener("click", () => {
   shareBtn.style.display = "flex";
   button.style.backgroundColor = "var(--very-dark-grayish-blue)";
   buttonIcon.style.filter = "brightness(100)";
-  buttonIcon.style.marginTop = "var(--s-24)";
 });

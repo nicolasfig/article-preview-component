@@ -212,12 +212,12 @@ main {
     align-items: center;
     justify-content: flex-start;
     width: 326px;
-    height: 64px;
+    height: 68px;
     border-radius: 0 0 var(--s-16) var(--s-16);
     background-color: var(--very-dark-grayish-blue);
     position: absolute;
     left: -262px;
-    top: 0px;
+    top: -4px;
   }
 
   .share-buttons > p {
@@ -228,10 +228,18 @@ main {
     margin-left: var(--s-24);
   }
 
+  .share-btn {
+    position: relative;
+    z-index: 2;
+    background-color: var(--light-grayish-blue);
+  }
+
   .share-btn-icon {
     width: var(--s-16);
     height: var(--s-16);
-    z-index: 2;
+    position: relative;
+    top: 10px;
+    z-index: 1;
   }
 
   .share-buttons::after {
