@@ -229,7 +229,6 @@ main {
   }
 
   .share-btn-icon {
-    margin-top: var(--s-24);
     width: var(--s-16);
     height: var(--s-16);
     z-index: 2;
