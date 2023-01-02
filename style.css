@@ -1,0 +1,134 @@
+@import url(normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  /* Colors */
+
+  --very-dark-rayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --white: hsl(0, 100%, 100%);
+
+  /* Sizes*/
+  --s-8: 0.5rem;
+  --s-16: 1rem;
+  --s-24: 1.5rem;
+  --s-32: 2rem;
+  --s-40: 2.5rem;
+  --s-48: 3rem;
+  --s-64: 4rem;
+  --s-80: 5rem;
+
+  /* Fonts */
+  --manrope: "Manrope", sans-serif;
+  --w-medium: 500;
+  --w-bold: 700;
+}
+body {
+  font-family: var(--manrope);
+  background-color: var(--light-grayish-blue);
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.card {
+  width: 730px;
+  height: 280px;
+  display: flex;
+  background-color: var(--white);
+  border-radius: var(--s-16);
+}
+
+.image {
+  background: url(./images/drawers.jpg);
+  width: 286px;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: var(--s-16) 0 0 var(--s-16);
+}
+
+.content {
+  box-sizing: border-box;
+  width: 444px;
+  padding: 40px;
+}
+
+.content > h1 {
+  font-size: 20px;
+  font-weight: var(--w-bold);
+  color: var(--very-dark-rayish-blue);
+  margin-bottom: var(--s-24);
+}
+
+.content > p {
+  font-size: 13px;
+  color: var(--desaturated-dark-blue);
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.portrait {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.data {
+  margin-left: -120px;
+}
+
+.data .name {
+  color: var(--very-dark-rayish-blue);
+  font-weight: var(--w-bold);
+  margin-bottom: var(--s-8);
+}
+
+.data .date {
+  color: var(--desaturated-dark-blue);
+}
+
+.share-btn {
+  width: var(--s-32);
+  height: var(--s-32);
+  background-color: var(--light-grayish-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-btn-icon {
+  width: var(--s-16);
+  height: var(--s-16);
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  width: 100%;
+  text-align: center;
+  position: inherit;
+  margin-bottom: var(--s-8);
+  color: var(--blue);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
