@@ -45,34 +45,6 @@ main {
   border-radius: var(--s-16);
 }
 
-.share-buttons {
-  display: none;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
-  width: 248px;
-  height: 66px;
-  border-radius: var(--s-8);
-  background-color: var(--very-dark-grayish-blue);
-  position: fixed;
-  right: 56px;
-  top: 255px;
-}
-
-.share-buttons::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 0;
-  z-index: 1;
-  border-style: solid;
-  border-color: var(--very-dark-grayish-blue) transparent;
-  border-width: 15px 20px 0;
-  bottom: -14px;
-  left: 50%;
-  margin-left: -20px;
-}
-
 .share-buttons > p {
   font-size: 10px;
   letter-spacing: 5px;
@@ -141,6 +113,9 @@ main {
 .data .date {
   color: var(--desaturated-dark-blue);
 }
+.share-buttons-container {
+  position: relative;
+}
 
 .share-btn {
   width: var(--s-32);
@@ -155,6 +130,34 @@ main {
 .share-btn-icon {
   width: var(--s-16);
   height: var(--s-16);
+}
+
+.share-buttons {
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 248px;
+  height: 66px;
+  border-radius: var(--s-8);
+  background-color: var(--very-dark-grayish-blue);
+  position: absolute;
+  left: -110px;
+  top: -85px;
+}
+
+.share-buttons::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: var(--very-dark-grayish-blue) transparent;
+  border-width: 15px 20px 0;
+  bottom: -14px;
+  left: 50%;
+  margin-left: -20px;
 }
 
 .attribution {
@@ -206,17 +209,30 @@ main {
   }
 
   .share-buttons {
-    display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
+    justify-content: flex-start;
     width: 326px;
     height: 64px;
-    border-radius: 0 0 var(--s-8) var(--s-8);
+    border-radius: 0 0 var(--s-16) var(--s-16);
     background-color: var(--very-dark-grayish-blue);
-    position: fixed;
-    right: 24px;
-    top: 502px;
+    position: absolute;
+    left: -262px;
+    top: 0px;
+  }
+
+  .share-buttons > p {
+    margin-left: var(--s-24);
+  }
+
+  .social-icon {
+    margin-left: var(--s-24);
+  }
+
+  .share-btn-icon {
+    margin-top: var(--s-24);
+    width: var(--s-16);
+    height: var(--s-16);
+    z-index: 2;
   }
 
   .share-buttons::after {
