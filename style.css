@@ -4,7 +4,7 @@
 :root {
   /* Colors */
 
-  --very-dark-rayish-blue: hsl(217, 19%, 35%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
   --desaturated-dark-blue: hsl(214, 17%, 51%);
   --grayish-blue: hsl(212, 23%, 69%);
   --light-grayish-blue: hsl(210, 46%, 95%);
@@ -45,6 +45,46 @@ main {
   border-radius: var(--s-16);
 }
 
+.share-buttons {
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 248px;
+  height: 66px;
+  border-radius: var(--s-8);
+  background-color: var(--very-dark-grayish-blue);
+  position: fixed;
+  right: 56px;
+  top: 255px;
+}
+
+.share-buttons::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: var(--very-dark-grayish-blue) transparent;
+  border-width: 15px 20px 0;
+  bottom: -14px;
+  left: 50%;
+  margin-left: -20px;
+}
+
+.share-buttons > p {
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--light-grayish-blue);
+  text-transform: uppercase;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
 .image {
   background: url(./images/drawers.jpg);
   width: 286px;
@@ -63,7 +103,7 @@ main {
 .content > h1 {
   font-size: 20px;
   font-weight: var(--w-bold);
-  color: var(--very-dark-rayish-blue);
+  color: var(--very-dark-grayish-blue);
   margin-bottom: var(--s-24);
 }
 
@@ -93,7 +133,7 @@ main {
 }
 
 .data .name {
-  color: var(--very-dark-rayish-blue);
+  color: var(--very-dark-grayish-blue);
   font-weight: var(--w-bold);
   margin-bottom: var(--s-8);
 }
@@ -163,5 +203,23 @@ main {
 
   .data {
     margin-left: -34px;
+  }
+
+  .share-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 326px;
+    height: 64px;
+    border-radius: 0 0 var(--s-8) var(--s-8);
+    background-color: var(--very-dark-grayish-blue);
+    position: fixed;
+    right: 24px;
+    top: 502px;
+  }
+
+  .share-buttons::after {
+    display: none;
   }
 }
